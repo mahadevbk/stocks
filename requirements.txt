@@ -7,4 +7,5 @@ requests==2.31.0
 prophet==1.1.4
 pystan==2.19.1.1
 statsmodels==0.14.0
-
+setuptools>=65.0.0
+wheel>=0.41.0
