@@ -135,10 +135,14 @@ if st.button("Analyze Stock"):
         st.subheader("Price Forecasts")
 
         # Prophet Forecast
+        #if HAS_PROPHET:
+        # Prophet Forecast
         if HAS_PROPHET:
             try:
                 st.write("Running Prophet model...")
                 forecast_data = hist.reset_index()[['Date', 'Close']].rename(columns={'Date': 'ds', 'Close': 'y'})
+                # Remove timezone information from 'ds' column
+                forecast_data['ds'] = forecast_data['ds'].dt.tz_localize(None)
                 m = Prophet(daily_seasonality=True)
                 m.fit(forecast_data)
                 future = m.make_future_dataframe(periods=forecast_days)
