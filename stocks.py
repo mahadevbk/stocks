@@ -24,7 +24,7 @@ pd.options.mode.chained_assignment = None
 
 # Streamlit app configuration
 st.set_page_config(page_title="Stock Analyzer", layout="wide")
-st.title("📈 Stock Analyzer")
+st.title("📈 Dev's totally basic Stock Analyzer")
 
 # Sidebar for user inputs
 st.sidebar.header("Input Parameters")
