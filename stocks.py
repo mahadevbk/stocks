@@ -224,3 +224,6 @@ if st.button("Analyze Stock"):
 
     except Exception as e:
         st.error(f"An error occurred: {e}")
+
+
+st.info("Built with ❤️ using [Streamlit](https://streamlit.io/) — free and open source. [Other Scripts by dev](https://devs-scripts.streamlit.app/) on Streamlit.")
